@@ -15,7 +15,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {posts: []};
-    axios.post('http://websight.tech/api', {
+    axios.post('https://websighttech-blog-api.herokuapp.com/api', {
       action: 'GET_ALL_POSTS'
     }).then(response => {
       this.setState({posts: response.data});
