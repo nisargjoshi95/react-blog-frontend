@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "0.7.1",
+    "express": "^4.16.3",
     "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -34,7 +35,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack --mode production",
+    "devserver": "webpack-dev-server --mode development --hot",
     "build": "webpack --mode production",
     "test": "mocha"
   },

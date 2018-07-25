@@ -50,7 +50,7 @@ module.exports = {
   ],
   devServer: {
     proxy: {
-      '/api': 'http://47.187.208.197'
+      '/api': 'http://websight.tech'
     },
     host: '0.0.0.0',
     port: 8080
