@@ -4,13 +4,6 @@ import axios from 'axios';
 import Article from '../article/article.component';
 import ArticleSummary from '../article/summary.component';
 
-const testArticle = {
-  title: 'Why I Use React Over Angular',
-  date: 'July 23, 2018 by Nisarg Joshi',
-  description: 'An all too common question for beginning web developers.',
-  link: ''
-}
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
