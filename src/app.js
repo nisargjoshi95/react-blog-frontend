@@ -3,21 +3,25 @@ import ReactDOM from 'react-dom';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
-// Redux store
+// Components
+import Router from './components/router/router.component';
+
+// Styles
+require('./index.sass')
+
+// Store
 const store = createStore(
   combineReducers({
-    //some reducers
+    //sidebar: sidebarReducer
+    // projects: projectsReducer,
+    // frameworks: infoReducer
   }),
-  window.__REDUX_DEVTOOLS_EXTENSION__ &&
-  window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-// Base app
-const jsx = pug`
-  Provider(store=${store})
+const Index = () => pug`
+  Provider(store=store)
     Router
 `;
 
-console.log(store.getState());
-
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<Index />, document.getElementById('app'));
