@@ -38,27 +38,6 @@ module.exports = {
             }
           ]
         })
-        // [
-        //   {
-        //     loader: 'style-loader'
-        //   },
-        //   {
-        //     loader: 'css-loader',
-        //     options: {
-        //       modules: false,
-        //       importLoaders: 1,
-        //       localIdentName: '[name]_[local]_[hash:base64]',
-        //       sourceMap: true,
-        //       minimize: true
-        //     }
-        //   },
-        //   {
-        //     loader: 'sass-loader',
-        //     options: {
-        //       sourceMap: true
-        //     }
-        //   }
-        // ]
       }
     ]
   },
@@ -72,6 +51,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': 'http://47.187.208.197'
-    }
+    },
+    port: 80
   }
 };
