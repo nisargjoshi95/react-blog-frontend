@@ -52,6 +52,7 @@ module.exports = {
     proxy: {
       '/api': 'http://47.187.208.197'
     },
-    port: 80
+    host: '0.0.0.0',
+    port: 8080
   }
 };
