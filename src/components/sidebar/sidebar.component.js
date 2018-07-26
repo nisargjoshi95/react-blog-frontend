@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './sidebar.sass';
 
@@ -8,22 +9,22 @@ const Sidebar = () => pug`
     br
     ul.menu-list
       li
-        a Home
+        Link(to='/') Home
       li
-        a Articles
+        Link(to='/articles') Articles
         ul.menu-list
           li
-            a Coding
+            Link(to='/articles/coding') Coding
           li
-            a Design
+            Link(to='/articles/design') Design
           li
-            a Industry
+            Link(to='/articles/industry') Industry
           li
-            a Workflow
+            Link(to='/articles/workflow') Workflow
       li
-        a Recommended Reading
+        Link(to='/rr') Recommended Reading
       li
-        a About This Site
+        Link(to='/about') About This Site
 `;
 
 export default Sidebar;

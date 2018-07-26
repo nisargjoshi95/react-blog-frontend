@@ -9,9 +9,9 @@ import NoMatch from '../404/404.component';
 import './router.sass';
 
 const Router = () => pug`
-  .columns.is-mobile#pageContainer
-    Sidebar
-    BrowserRouter
+  BrowserRouter
+    .columns.is-mobile#pageContainer
+      Sidebar
       Switch
         Route(path='/', component=Home, exact=true)
         Route(path='/articles/:postId', component=Article)
