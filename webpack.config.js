@@ -7,7 +7,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    filename: 'js/bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -52,7 +53,7 @@ module.exports = {
     proxy: {
       '/api': 'http://websight.tech'
     },
-    host: '0.0.0.0',
-    port: 8080
+    port: 8080,
+    historyApiFallback: true
   }
 };

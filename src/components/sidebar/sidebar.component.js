@@ -4,7 +4,7 @@ import './sidebar.sass';
 
 const Sidebar = () => pug`
   aside.menu.column.is-narrow
-    img#sidebar-logo(src='public/logo_text.png', alt='WebSight Blog', height='48px')
+    img#sidebar-logo(src='/public/logo_text.png', alt='WebSight Blog', height='48px')
     br
     ul.menu-list
       li

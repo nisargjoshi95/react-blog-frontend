@@ -4,6 +4,8 @@ import axios from 'axios';
 import Article from '../article/article.component';
 import ArticleSummary from '../article/summary.component';
 
+import './home.sass';
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -20,9 +22,9 @@ class Home extends React.Component {
   render() {
     return pug`
     .column #[.is-size-3 New Articles]
-      .columns.is-multi-line
+      .columns.is-multi-line.has-subcolumns
         each post, index in this.state.posts
-          .column.is-half(key=post.title)
+          .column.is-half(key=post.$loki)
             ArticleSummary(...post)
   `;
   }
