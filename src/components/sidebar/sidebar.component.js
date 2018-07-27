@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './sidebar.sass';
 
 const Sidebar = () => pug`
-  aside.menu.column.is-narrow
+  aside.menu.column.is-narrow.off-canvas-sidebar#sidebar
     img#sidebar-logo(src='/public/logo_text.png', alt='WebSight Blog', height='48px')
     br
     ul.menu-list

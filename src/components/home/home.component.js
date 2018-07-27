@@ -21,10 +21,11 @@ class Home extends React.Component {
 
   render() {
     return pug`
-    .column #[.is-size-3 New Articles]
+    .column
+      .is-size-2.has-text-centered New Articles
       .columns.is-multi-line.has-subcolumns
         each post, index in this.state.posts
-          .column.is-half(key=post.$loki)
+          .column.is-half-desktop(key=post.$loki)
             ArticleSummary(...post)
   `;
   }

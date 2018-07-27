@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
-// Components
-import Router from './components/router/router.component';
-
 // Styles
 require('./index.sass')
+
+// Components
+import Router from './components/router/router.component';
 
 // Store
 const store = createStore(

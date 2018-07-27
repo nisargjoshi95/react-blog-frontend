@@ -10,7 +10,10 @@ const NewComment = () => {
       .media-content
         .field
           p.control
-            textarea.textarea(placeholder='Add a comment...')
+            input.input.is-primary(type='text', placeholder='Your Name')
+        .field
+          p.control
+            textarea.textarea.is-primary(placeholder='Add a comment...')
         nav.level
           .level-left
             .level-item

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { isMobile } from 'react-device-detect'
 
 import Home from '../home/home.component';
 import Sidebar from '../sidebar/sidebar.component';
@@ -10,12 +11,18 @@ import './router.sass';
 
 const Router = () => pug`
   BrowserRouter
-    .columns.is-mobile#pageContainer
+    #pageContainer.off-canvas(class= !isMobile && 'off-canvas-sidebar-show')
+      a.off-canvas-toggle.navbar-burger(role='button', aria-label='menu', aria-expanded='false' href='#sidebar')
+        span
+        span
+        span
       Sidebar
-      Switch
-        Route(path='/', component=Home, exact=true)
-        Route(path='/articles/:postId', component=Article)
-        Route(component=NoMatch) // Route with no path always matches - 404
+      a.off-canvas-overlay(href='#close')
+      .off-canvas-content.is-paddingless
+        Switch
+          Route(path='/', render=${() => pug`Home(isMobile)`}, exact=true)
+          Route(path='/articles/:postId', component=Article)
+          Route(component=NoMatch) // Route with no path always matches - 404
 `;
 
 export default Router;
