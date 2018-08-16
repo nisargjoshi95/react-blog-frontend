@@ -33,7 +33,7 @@ class Article extends React.Component {
     const post = this.state.post;
     return pug`
       if !this.state.loading
-        .column.article
+        .article
           h1.is-size-2.has-text-centered #{post.title}
             p.is-size-7.has-text-weight-light #{new Date(post.createdAt).toDateString()} by #[Link.is-size-7(to='/authors') #{post.author}]
           section.section
@@ -43,7 +43,7 @@ class Article extends React.Component {
               Comment(...comment, key=i)
             NewComment
       else
-        .column#center-loader
+        #center-loader
           a.button.is-text.is-size-1.is-loading.article-loading
     `;
   }

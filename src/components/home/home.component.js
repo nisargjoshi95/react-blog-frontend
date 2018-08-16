@@ -21,7 +21,7 @@ class Home extends React.Component {
 
   render() {
     return pug`
-    .column
+    div
       .is-size-2.has-text-centered New Articles
       .columns.is-multi-line.has-subcolumns
         each post, index in this.state.posts

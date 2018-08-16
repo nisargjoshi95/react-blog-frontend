@@ -9,6 +9,9 @@ const Article = (props) => pug`
     p.is-size-7.has-text-weight-light #{new Date(props.createdAt).toDateString()} by #[Link.is-size-7(to='/authors') #{props.author}]
     p.section#is-small #{props.description}
     Link(to='/articles/' + props.$loki) Go to article
+    .tags#is-small
+      each tag, i in props.tags
+        span.tag.is-info.is-rounded(key=i) #{tag}
 `;
 
 export default Article;
